@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import backgroundImage from '../assets/bg-image.png';
 import musicData from '../data/musicData.json';
+import content from "../data/content.json";
 import AIChat from '../components/AIChat';
 
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
   const [featuredPlaylist, setFeaturedPlaylist] = useState({});
   const [loading, setLoading] = useState(true);
   const [darkBackground, setDarkBackground] = useState(false);
-  
+  const [contentData, setContentData] = useState({});
   // NEW: API states
   const [topArtists, setTopArtists] = useState([]);
   const [apiLoading, setApiLoading] = useState(true);
@@ -22,7 +23,8 @@ function Home() {
     };
 
     document.addEventListener('themeChange', handleThemeChange);
-    
+    setContentData(content);
+    setLoading(false);
     // Load saved theme on component mount
     const savedTheme = localStorage.getItem('groovifyBackground');
     if (savedTheme === 'dark') {
@@ -54,10 +56,7 @@ function Home() {
         setApiLoading(true);
         // iTunes API search for Pakistani artists
         const response = await fetch('https://itunes.apple.com/search?term=pakistani+artist&entity=musicArtist&limit=6');
-        
-        if (!response.ok) {
-          throw new Error('API request failed');
-        }
+
         
         const data = await response.json();
         setTopArtists(data.results.slice(0, 6)); // Get top 6 artists

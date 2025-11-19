@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Welcome to Groovify",
+    "subtitle": "Fresh picks for you. Purple beats, black nights, and clean layouts.",
+    "description": "Dive into curated playlists, top artists and interactive AI-powered music discovery.",
+    "backgroundImage": "bg-image.png"
+  },
+
+  "sections": {
+    "featuredPlaylistTitle": "Featured Playlist",
+    "musicCardSection": "Top Music For You",
+    "artistSection": "Top Pakistani Artists",
+    "videoSection": "Live Radio – Lofi Hip-Hop Beats"
+  },
+
+  "video": {
+    "title": "Lofi Hip Hop Radio",
+    "embedUrl": "https://www.youtube.com/embed/jfKfPfyJRdk"
+  },
+
+  "staticCards": [
+    {
+      "id": 1,
+      "title": "Chill Vibes",
+      "description": "Calm beats for studying, coding, and relaxing.",
+      "image": "card1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Workout Hits",
+      "description": "Pump your energy with these powerful tracks.",
+      "image": "card2.jpg"
+    }
+  ]
+}
