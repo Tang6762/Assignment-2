@@ -4,6 +4,8 @@ import backgroundImage from '../assets/bg-image.png';
 import musicData from '../data/musicData.json';
 import content from "../data/content.json";
 import AIChat from '../components/AIChat';
+import Footer from '../components/Footer';
+
 
 function Home() {
   const [musicCards, setMusicCards] = useState([]);
@@ -204,6 +206,7 @@ function Home() {
         </p>
         <AIChat />
       </section>
+      <Footer />
     </div>
   );
 }
